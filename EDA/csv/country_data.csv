@@ -1,0 +1,102 @@
+country_id,country_txt,region_id
+4,Afghanistan,6
+5,Albania,9
+6,Algeria,10
+8,Angola,11
+11,Argentina,3
+14,Australia,12
+15,Austria,8
+19,Bangladesh,6
+21,Belgium,8
+23,Benin,11
+26,Bolivia,3
+30,Brazil,3
+32,Bulgaria,9
+33,Burkina Faso,11
+34,Burundi,11
+35,Belarus,9
+36,Cambodia,5
+37,Cameroon,11
+38,Canada,1
+41,Central African Republic,11
+42,Chad,11
+43,Chile,3
+44,China,4
+45,Colombia,3
+50,Croatia,9
+53,Cyprus,8
+57,Dominica,2
+59,Ecuador,3
+60,Egypt,10
+63,Eritrea,11
+65,Ethiopia,11
+68,Finland,8
+69,France,8
+74,Georgia,7
+75,Germany,8
+76,Ghana,11
+78,Greece,8
+83,Guatemala,2
+86,Guyana,3
+87,Haiti,2
+88,Honduras,2
+92,India,6
+93,Indonesia,5
+94,Iran,10
+95,Iraq,10
+96,Ireland,8
+97,Israel,10
+98,Italy,8
+99,Ivory Coast,11
+103,Kazakhstan,7
+104,Kenya,11
+107,Kyrgyzstan,7
+110,Lebanon,10
+113,Libya,10
+121,Malaysia,5
+122,Maldives,6
+123,Mali,11
+130,Mexico,1
+137,Mozambique,11
+138,Myanmar,5
+141,Nepal,6
+142,Netherlands,8
+143,New Caledonia,12
+144,New Zealand,12
+145,Nicaragua,2
+146,Niger,11
+147,Nigeria,11
+151,Norway,8
+153,Pakistan,6
+155,West Bank and Gaza Strip,10
+158,Paraguay,3
+159,Peru,3
+160,Philippines,5
+161,Poland,9
+162,Portugal,8
+167,Russia,9
+168,Rwanda,11
+173,Saudi Arabia,10
+182,Somalia,11
+183,South Africa,11
+186,Sri Lanka,6
+190,St. Lucia,2
+195,Sudan,11
+198,Sweden,8
+199,Switzerland,8
+200,Syria,10
+203,Tanzania,11
+205,Thailand,5
+207,Trinidad and Tobago,2
+208,Tunisia,10
+209,Turkey,10
+213,Uganda,11
+214,Ukraine,9
+217,United States,1
+222,Venezuela,3
+228,Yemen,10
+229,Democratic Republic of the Congo,11
+231,Zimbabwe,11
+603,United Kingdom,8
+1003,Kosovo,9
+1004,South Sudan,11
