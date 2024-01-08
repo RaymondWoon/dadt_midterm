@@ -4,16 +4,27 @@
 const { models } = require("../models");
 const Attack_Type = models.Attack_Type;
 
-//const Region = require("../models/region.model");
-
-// GET all regions
+// GET all 'attack_types'
 exports.getAttack_Types = async (req, res, next) => {
   try {
-    // find all regions
-    //const regions = await Region.findAll({ order: ["region_id", "DESC"] });
+    // find all attack_types
     const attack_types = await Attack_Type.findAll();
-    console.log(attack_types);
-    return res.status(200).json(attack_types);
+
+    // create an array of 'attack_types'
+    const context = {
+      items: attack_types.map((item) => {
+        return {
+          id: item.attack_type_id,
+          description: item.attack_type_txt,
+        };
+      }),
+    };
+
+    res.render("dashboard", {
+      pageTitle: appName + " - Attack_Types",
+      title: "Attack Types",
+      items: context.items,
+    });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error });

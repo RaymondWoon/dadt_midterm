@@ -4,6 +4,8 @@ const express = require("express");
 const path = require("path");
 
 const bodyParser = require("body-parser");
+const expressLayouts = require("express-ejs-layouts");
+
 const cors = require("cors");
 
 // instantiate express
@@ -13,15 +15,23 @@ const app = express();
 const config = require("./config");
 
 // EJS layout and template
+app.use(expressLayouts);
+app.set("layout", "./layouts/main");
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
 // access static files
 app.use(express.static("public"));
 
 // json
-app.use(express.json());
+//app.use(express.json());
 
 // Body parser
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// application name from 'package.json'
+var pjson = require("./package.json");
+appName = pjson.name.charAt(0).toUpperCase() + pjson.name.slice(1);
 
 // middleware
 app.use(cors());

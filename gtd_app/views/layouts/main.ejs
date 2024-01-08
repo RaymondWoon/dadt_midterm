@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title><%= pageTitle %></title>
+
+    <link
+      rel="stylesheet"
+      href="/css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/perfect-scrollbar.css"
+    />
+
+    <script src="/js/perfect-scrollbar.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container container--narrow">
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menuItem"><a href="/gtd">Home</a></li>
+            <li class="header__menuItem"><a href="/gtd/regions">Region</a></li>
+            <li class="header__menuItem">
+              <a href="/gtd/countries">Countries</a>
+            </li>
+            <li class="header__menuItem">
+              <a href="/gtd/nationalities">Nationalities</a>
+            </li>
+            <li class="header__menuItem">
+              <a href="/gtd/target_types">Target Types</a>
+            </li>
+            <li class="header__menuItem">
+              <a href="/gtd/target_subtypes">Target Subtypes</a>
+            </li>
+            <li class="header__menuItem">
+              <a href="/gtd/weapon_types">Weapon Types</a>
+            </li>
+            <li class="header__menuItem">
+              <a href="/gtd/weapon_subtypes">Weapon Subtypes</a>
+            </li>
+            <li class="header__menuItem">
+              <a href="/gtd/attack_types">Attack Types</a>
+            </li>
+            <li class="header__menuItem">
+              <a href="/gtd/alternative_dsns">Alternative Dsns.</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="ps">
+      <main>
+        <div class="container">
+          <p>
+            This is a web app developed to analyse the 'Global Terrorism
+            Database' from
+            <a href="https://www.start.umd.edu/gtd"
+              >https://www.start.umd.edu/gtd </a
+            >. Visit the links above to see some of the individual data tables.
+          </p>
+          <%- body %>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
