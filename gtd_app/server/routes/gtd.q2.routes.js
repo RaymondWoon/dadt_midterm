@@ -13,8 +13,6 @@ const controller = require("../controllers/gtd.q.controller");
 //  const q1 = await fetch(`${BASE_URL}/api/query/`);
 //});
 
-router.get("/", async (req, res) => {
-  const q1 = await fetch(`${BASE_URL}/gtd/q1`);
-});
+router.get("/", controller.getAllKilled_WeaponSubtype);
 
 module.exports = router;

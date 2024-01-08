@@ -37,7 +37,11 @@ appName = pjson.name.charAt(0).toUpperCase() + pjson.name.slice(1);
 app.use(cors());
 
 // Routes
-//app.use("/gtd", require("./server/routes/gtd.routes"));
+//app.use("/gtd", (req, res) => {
+//  res.render("home", {
+//    pageTitle: appName + " - Home",
+//  });
+//});
 app.use("/gtd/regions", require("./server/routes/region.routes"));
 app.use("/gtd/countries", require("./server/routes/country.routes"));
 app.use("/gtd/nationalities", require("./server/routes/nationality.routes"));
@@ -56,5 +60,14 @@ app.use(
   "/gtd/alternative_dsns",
   require("./server/routes/alternative_dsn.routes")
 );
+app.use("/gtd/q1", require("./server/routes/gtd.q1.routes"));
+app.use("/gtd/q2", require("./server/routes/gtd.q2.routes"));
+app.use("/gtd/q3", require("./server/routes/gtd.q3.routes"));
+app.use("/gtd/q4", require("./server/routes/gtd.q4.routes"));
+
+// set the 'gtd' page as the landing page
+app.get("/", (req, res) => {
+  res.redirect("/gtd/regions");
+});
 
 module.exports = app;
