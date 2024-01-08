@@ -4,16 +4,27 @@
 const { models } = require("../models");
 const Nationality = models.Nationality;
 
-//const Region = require("../models/region.model");
-
-// GET all regions
+// GET all nationalities
 exports.getNationalities = async (req, res, next) => {
   try {
-    // find all regions
-    //const regions = await Region.findAll({ order: ["region_id", "DESC"] });
+    // find all nationalities
     const nationalities = await Nationality.findAll();
-    console.log(nationalities);
-    return res.status(200).json(nationalities);
+
+    // create an array of 'nationalities'
+    const context = {
+      items: nationalities.map((item) => {
+        return {
+          id: item.nationality_id,
+          description: item.nationality_txt,
+        };
+      }),
+    };
+
+    res.render("dashboard", {
+      pageTitle: appName + " - Nationalities",
+      title: "Nationalities",
+      items: context.items,
+    });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error });

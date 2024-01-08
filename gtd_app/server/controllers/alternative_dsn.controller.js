@@ -4,16 +4,27 @@
 const { models } = require("../models");
 const Alternative_Dsn = models.Alternative_Dsn;
 
-//const Region = require("../models/region.model");
-
-// GET all regions
+// GET all 'alternative_dsns'
 exports.getAlternative_Dsns = async (req, res, next) => {
   try {
-    // find all regions
-    //const regions = await Region.findAll({ order: ["region_id", "DESC"] });
+    // find all 'alternation_dsn
     const alternative_dsns = await Alternative_Dsn.findAll();
-    console.log(alternative_dsns);
-    return res.status(200).json(alternative_dsns);
+
+    // create an array of 'alternative_dsns'
+    const context = {
+      items: alternative_dsns.map((item) => {
+        return {
+          id: item.alternative_id,
+          description: item.alternative_txt,
+        };
+      }),
+    };
+
+    res.render("dashboard", {
+      pageTitle: appName + " - Alternative Dsns",
+      title: "Alternative Designations",
+      items: context.items,
+    });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error });

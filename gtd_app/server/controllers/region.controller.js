@@ -10,10 +10,23 @@ const Region = models.Region;
 exports.getRegions = async (req, res, next) => {
   try {
     // find all regions
-    //const regions = await Region.findAll({ order: ["region_id", "DESC"] });
     const regions = await Region.findAll();
-    console.log(regions);
-    return res.status(200).json(regions);
+
+    // create an array of 'regions'
+    const context = {
+      items: regions.map((item) => {
+        return {
+          id: item.region_id,
+          description: item.region_txt,
+        };
+      }),
+    };
+
+    res.render("dashboard", {
+      pageTitle: appName + " - Regions",
+      title: "Regions",
+      items: context.items,
+    });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error });
