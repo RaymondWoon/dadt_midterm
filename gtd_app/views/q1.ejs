@@ -1,0 +1,22 @@
+<div id="content">
+  <h2><u><%= title %></u></h2>
+  <br />
+  <% if (items.length > 0) { %>
+  <table class="center">
+    <thead>
+      <th>id</th>
+      <th><%= subtitle %></th>
+      <th># killed</th>
+    </thead>
+    <tbody>
+      <% for (let item of items) { %>
+      <tr>
+        <td><%= item.id %></td>
+        <td><%= item.description %></td>
+        <td><%= item.nkill %></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <% } %>
+</div>
