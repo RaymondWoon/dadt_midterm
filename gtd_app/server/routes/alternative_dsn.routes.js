@@ -5,13 +5,10 @@ const express = require("express");
 // instantiate the express Router
 const router = express.Router();
 
-// instantiate the region controller
+// instantiate the alternative_dsnn controller
 const controller = require("../controllers/alternative_dsn.controller");
 
-// GET regions (/gtd/regions)
+// GET alternative_dsns (/gtd/alternative_dsns)
 router.get("/", controller.getAlternative_Dsns);
-
-// GET region  (/gtd/region/{id})
-//router.get("/:id", regionController.show);
 
 module.exports = router;

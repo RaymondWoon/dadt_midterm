@@ -5,13 +5,10 @@ const express = require("express");
 // instantiate the express Router
 const router = express.Router();
 
-// instantiate the region controller
+// instantiate the controller
 const controller = require("../controllers/country.controller");
 
-// GET regions (/gtd/regions)
+// GET country (/gtd/countriess)
 router.get("/", controller.getCountries);
-
-// GET region  (/gtd/region/{id})
-//router.get("/:id", regionController.show);
 
 module.exports = router;
